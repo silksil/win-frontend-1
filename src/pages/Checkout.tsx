@@ -2,7 +2,7 @@ import { PaymentSuccessCallback } from '../components/PaymentCard';
 import { utils } from 'ethers';
 import { Container, Box, CircularProgress, Typography, Card } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { useNavigate, createSearchParams } from 'react-router-dom';
 import { DateTime } from 'luxon';
 import MainLayout from '../layouts/main';

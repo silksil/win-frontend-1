@@ -18,5 +18,6 @@
     "skipLibCheck": true
   },
   "include": ["./src", "./test", "./swagger", "./src/mocks/**.json"],
+  "exclude": ["node_modules"],
   "types": ["reflect-metadata", "swagger-express-ts"]
 }

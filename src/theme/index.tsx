@@ -1,4 +1,4 @@
-import { useMemo, ReactNode } from 'react';
+import React, { useMemo, ReactNode } from 'react';
 import { CssBaseline } from '@mui/material';
 import {
   createTheme,

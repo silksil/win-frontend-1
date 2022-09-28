@@ -1,3 +1,4 @@
+import React from 'react';
 import { AppStateProvider } from './store';
 import { AppRoutes } from './Routes';
 import { GrommetProvider } from './theme/GrommetProvider';

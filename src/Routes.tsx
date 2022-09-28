@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { useRoutes, useLocation, Navigate } from 'react-router-dom';
 import { useAppState } from './store';
 

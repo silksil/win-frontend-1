@@ -5,6 +5,7 @@ import { initHotJar } from './utils/hotjar.js';
 import 'leaflet/dist/leaflet.css';
 import './reset.css';
 import App from './App';
+import React from 'react';
 
 if (
   process &&

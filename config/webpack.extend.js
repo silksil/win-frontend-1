@@ -19,18 +19,56 @@ module.exports = {
     if (!config.resolve.fallback) config.resolve.fallback = {};
     resolveFallback(config);
 
+    console.log('JO', config.externals);
     if (!config.plugins) config.plugins = [];
     config.plugins.push(
       new webpack.DefinePlugin({
         'process.env.ENV': JSON.stringify('dev')
       })
     );
+
     config.plugins.push(
       new webpack.ProvidePlugin({
         process: 'process/browser.js',
         Buffer: ['buffer', 'Buffer']
       })
     );
+
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'swc-loader',
+        options: {
+          parseMap: true,
+          sync: true
+        }
+      }
+    });
+
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'swc-loader',
+        options: {
+          parseMap: true,
+          sync: true
+        }
+      }
+    });
+
+    // config.externals.push({
+    //   test: /\.(ts|tsx)$/,
+    //   exclude: /node_modules/,
+    //   use: {
+    //     loader: 'swc-loader',
+    //     options: {
+    //       parseMap: true,
+    //       sync: true
+    //     }
+    //   }
+    // });
 
     if (!config.ignoreWarnings) config.ignoreWarnings = [];
     config.ignoreWarnings.push(/Failed to parse source map/);

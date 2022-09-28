@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ReactNode } from 'react';
 import type { Web3ModalConfig } from '../hooks/useWeb3Modal';
 import { createContext, useContext, useEffect } from 'react';

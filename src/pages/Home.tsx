@@ -1,3 +1,4 @@
+import React from 'react';
 import MainLayout from 'src/layouts/main';
 import LandingCities from 'src/containers/home/LandingCities';
 import LandingConferences from 'src/containers/home/LandingConferences';
